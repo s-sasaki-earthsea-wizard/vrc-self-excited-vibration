@@ -1,0 +1,38 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景 -->
+  <rect width="800" height="300" fill="#f0f8ff"/>
+  
+  
+  <!-- 上側：右が上がっている橋 -->
+  <g transform="translate(400, 180)">
+    <!-- タイトル -->
+    <text x="0" y="-100" text-anchor="middle" font-family="Arial" font-size="18" font-weight="bold">右側が上がっている状態</text>
+    
+    <!-- 橋の断面 -->
+    <g transform="rotate(15)">
+      <rect x="-120" y="-10" width="240" height="20" fill="#d4e6f1" stroke="#2874a6" stroke-width="2"/>
+    </g>
+    
+    <!-- 空気の流れ：上側（速い） -->
+    <line x1="-180" y1="-50" x2="190" y2="-50" stroke="#3498db" stroke-width="3" stroke-dasharray="5,5"/>
+    <polygon points="190,-50 175,-40 175,-60" fill="#3498db"/>
+    <text x="-160" y="-60" font-family="Arial" font-size="14">速い流れ（高圧）</text>
+    
+    <!-- 空気の流れ：下側（遅い） -->
+    <line x1="-180" y1="50" x2="190" y2="50" stroke="#3498db" stroke-width="3" stroke-dasharray="5,5"/>
+    <polygon points="190,50 175,40 175,60" fill="#3498db"/>
+    <text x="-160" y="70" font-family="Arial" font-size="14">遅い流れ（低圧）</text>
+    
+    <!-- 矢印：風向き -->
+    <line x1="-220" y1="0" x2="-180" y2="0" stroke="#2c3e50" stroke-width="2"/>
+    <polygon points="-180,-5 -170,0 -180,5" fill="#2c3e50"/>
+    <text x="-220" y="-10" font-family="Arial" font-size="14">風</text>
+    
+    <!-- 矢印：逆揚力 -->
+    <line x1="0" y1="0" x2="0" y2="70" stroke="#e74c3c" stroke-width="2"/>
+    <polygon points="-5,70 0,80 5,70" fill="#e74c3c"/>
+    <text x="-75" y="30" font-family="Arial" font-size="14" fill="#e74c3c">下向きの力</text>
+    
+  </g>
+      
+</svg>

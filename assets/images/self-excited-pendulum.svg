@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 400">
+  <!-- 背景 -->
+  <rect width="500" height="250" fill="#f8f8f8" />
+  
+  <!-- 天井 -->
+  <rect x="100" y="20" width="300" height="10" fill="#777" />
+  
+  <!-- 振り子の支点 -->
+  <circle cx="250" cy="30" r="5" fill="#444" />
+  
+  
+  <!-- 右端の振り子 -->
+  <line x1="250" y1="30" x2="320" y2="180" stroke="#000" stroke-width="2" />
+  <g transform="translate(300, 190), rotate(-30)">
+    <rect x="0" y="0" width="50" height="10" fill="#1e88e5" opacity="1" />
+  </g>
+  
+  <!-- 中央の振り子 -->
+  <line x1="250" y1="30" x2="250" y2="205" stroke="#000" stroke-width="2" opacity="0.4" />
+  <rect x="225" y="205" width="50" height="10" fill="#1e88e5" opacity="0.4" />
+  
+  <!-- 左端の振り子 -->
+  <line x1="250" y1="30" x2="180" y2="180" stroke="#000" stroke-width="2" />
+  <g transform="translate(160, 160), rotate(30)">
+    <rect x="0" y="0" width="50" height="10" fill="#1e88e5" opacity="1" />
+  </g>
+  
+  <!-- 振り子の軌跡 -->
+  <path d="M 180,180 C 210,220 290,220 320,180" stroke="#aaa" stroke-width="1" stroke-dasharray="5,3" fill="none" />
+
+  <!-- 矢印：風向き -->
+  <line x1="50" y1="125" x2="100" y2="125" stroke="#2c3e50" stroke-width="2"/>
+  <polygon points="100,125 90,120 90,130" fill="#2c3e50"/>
+  <text x="50" y="150" font-family="Arial" font-size="14">風</text>
+  
+  <!-- 矢印：揚力 -->
+  <line x1="320" y1="180" x2="320" y2="120" stroke="#e74c3c" stroke-width="2"/>
+  <polygon points="320,120 315,125 325,125" fill="#e74c3c"/>
+  <text x="330" y="150" font-family="Arial" font-size="14" fill="#e74c3c">上向きの力</text>
+
+  <!-- 矢印：逆揚力 -->
+  <line x1="180" y1="180" x2="180" y2="240" stroke="#e74c3c" stroke-width="2"/>
+  <polygon points="180,240 175,235 185,235" fill="#e74c3c"/>
+  <text x="100" y="200" font-family="Arial" font-size="14" fill="#e74c3c">下向きの力</text>
+
+</svg>

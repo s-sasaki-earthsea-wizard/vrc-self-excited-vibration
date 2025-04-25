@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 400">
+  <!-- 背景 -->
+  <rect width="500" height="250" fill="#f8f8f8" />
+  
+  <!-- 天井 -->
+  <rect x="100" y="20" width="300" height="10" fill="#777" />
+  
+  <!-- 振り子の支点 -->
+  <circle cx="250" cy="30" r="5" fill="#444" />
+  
+  
+  <!-- 右端の振り子 -->
+  <line x1="250" y1="30" x2="320" y2="180" stroke="#000" stroke-width="2" />
+  <circle cx="320" cy="180" r="20" fill="#1e88e5" />
+  
+  <!-- 中央の振り子 -->
+  <line x1="250" y1="30" x2="250" y2="205" stroke="#000" stroke-width="2" opacity="0.4" />
+  <circle cx="250" cy="205" r="20" fill="#1e88e5" opacity="0.4" />
+  
+  <!-- 左端の振り子 -->
+  <line x1="250" y1="30" x2="180" y2="180" stroke="#000" stroke-width="2" />
+  <circle cx="180" cy="180" r="20" fill="#1e88e5" />
+  
+  <!-- 振り子の軌跡 -->
+  <path d="M 180,180 C 210,220 290,220 320,180" stroke="#aaa" stroke-width="1" stroke-dasharray="5,3" fill="none" />
+</svg>
