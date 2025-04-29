@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>風の力で振れ幅が大きくなる振り子！？　〜タコマナローズ橋はなぜ落ちたのか〜</title>
+		<title>A Pendulum Whose Amplitude Increases with Wind!? ~Why Did the Tacoma Narrows Bridge Collapse?~</title>
 
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
@@ -25,64 +25,37 @@
 				<section data-markdown data-separator="---">
 					<textarea data-template>
 
-### 風の力で振れ幅が大きくなる振り子！？
-#### 〜タコマナローズ橋はなぜ落ちたのか〜
+### A Pendulum Whose Amplitude Increases with Wind!?
+#### Why Did the Tacoma Narrows Bridge Collapse?
 
 <img src="assets/images/title.png" height="400px">
 
 ---
 
-### 自己紹介
-
-<div class="profile-container">
-<div class="profile-left">
-
-* さめ(мег-сск)
-  * 🧑‍💻 フリーランスのソフトウェアエンジニア
-  * 🧑‍🎓 社会人学生として通信制大学在学中
-* 得意分野:
-	* 📸 コンピュータビジョン (画像認識/点群処理)
-	* 🌍 空間情報処理 (地理情報/リモートセンシング)
-	* ☁️ クラウドインフラ設計/IaC (AWS, GCP)
-* [GitHub](https://github.com/s-sasaki-earthsea-wizard)
-* [YouTube](https://www.youtube.com/@SyotaSasaki-EW)
-* [Speaker Deck](https://speakerdeck.com/syotasasaki593876)
-
-</div>
-
-<div class="profile-right">
-
-<img src="assets/images/avatar.png" alt="avatar" height="350px" width="350px">
-
-</div>
-</div>
-
----
-
-### 今日話すこと
+### Today's Topics
 
 <div class="simple-box">
 
-* タコマナローズ橋はなぜ落ちたのか？
-  * 1940年11月7日に起きた橋の崩落事故
-* 調和振動と減衰振動の運動方程式
-  * シンプルな振り子のモデル
-* ベルヌーイの定理と揚力、逆揚力
-* 揚力による負の減衰をする振動方程式
-* **自励振動**のメカニズム
-  * 運動方程式のわずかな違いが結果を大きく変える！
+* Why did the Tacoma Narrows Bridge collapse?
+  * The bridge collapsed on November 7, 1940
+* Equations of motion for harmonic and damped oscillations
+  * A simple pendulum model
+* Bernoulli's theorem and lift, negative lift
+* Vibration equation with negative damping due to lift
+* Mechanism of **self-excited vibration**
+  * A small difference in the equation of motion can drastically change the result!
 
 </div>
 
 ---
 
-### タコマナローズ橋の崩落
+### The Collapse of the Tacoma Narrows Bridge
 
 <div class="simple-box">
 
-* 1940年11月7日に崩落
-* 風によって橋が大きくうねった！
-* 実際に動画を見てみよう！
+* Collapsed on November 7, 1940
+* The bridge undulated significantly due to wind!
+* Let's watch the actual video!
 
 </div>
 
@@ -91,13 +64,12 @@
 
 ---
 
-### 現在のタコマナローズ橋
+### The Current Tacoma Narrows Bridge
 
 <div class="simple-box">
 
-* 1950年に再建
-* 2007年に2本目の橋を建設
-* 今日は崩落した旧橋のことを「タコマナローズ橋」と呼びます
+* Rebuilt in 1950
+* A second bridge was constructed in 2007
 
 </div>
 
@@ -105,32 +77,31 @@
 
 ---
 
-### 注意点
+### Important Notes
 
 <div class="simple-box">
 
-* 実際の橋の崩落の原因はもっと複雑
-  * 風洞実験や数値シミュレーションが橋梁の設計に使われている
-* でも今日は最もシンプルなモデルを考える
-* **自励振動のメカニズム**にフォーカスします！
+* The actual cause of the bridge collapse is more complex
+  * Wind tunnel tests and numerical simulations are used in bridge design
+* But today we'll consider the simplest model
+* We'll focus on the mechanism of **self-excited vibration**!
 
 </div>
 
 ---
 
-## 振動の運動方程式
+## Equations of Motion for Vibration
 
 ---
 
-### 振り子の運動: 調和振動
+### Pendulum Motion
 
 <div class="simple-box">
 
-* 振り子を持ち上げて手を離す
-* 重力によって中央へ動かす復元力が働く
-* 中央を通っても急に止まれず逆端まで振れる
-* 復元力で再び中央へ戻ろうとする
-* この繰り返しで振り子は振動する
+* Lift the pendulum and release it
+* A restoring force acts to move it toward the center due to gravity
+* Swings to the opposite end
+* This repetition causes the pendulum to oscillate
 
 </div>
 
@@ -138,42 +109,34 @@
 
 ---
 
-### 調和振動の運動方程式
+### Equation of Motion for Harmonic Oscillation
 
-$$ m\frac{d^2x}{dt^2} + \underbrace{kx}_{\text{復元力}} = 0 $$
-
-<div class="simple-box">
-
-一般解は
+$$ m\frac{d^2x}{dt^2} + \underbrace{kx}_{\text{restoring force}} = 0 $$
 
 $$ x(t) = A \cos\left(\sqrt{\frac{k}{m}} t + \varphi \right) $$
 
-</div>
-
-<br>
-
 <div class="highlight-box">
 
-* この運動は**調和振動**と呼ばれる
+* This motion is called **harmonic oscillation**
 
 </div>
 
 ---
 
-### 減衰振動の運動方程式
+### Equation of Motion for Damped Oscillation
 
 <div class="simple-box">
 
-* 実際の振り子はいつまでも振動し続けるわけではない
-* 空気抵抗や摩擦などの減衰力が働くため振動は徐々に小さくなる
+* A real pendulum doesn't continue oscillating forever
+* The oscillation gradually decreases due to damping forces like air resistance and friction
 
 </div>
 
-$$ m\frac{d^2x}{dt^2} + \underbrace{\beta \frac{dx}{dt}}_{\text{減衰力}} + kx  = 0 $$
+$$ m\frac{d^2x}{dt^2} + \underbrace{\beta \frac{dx}{dt}}_{\text{damping force}} + kx  = 0 $$
 
 ---
 
-### 減衰運動の一般解
+### Damped Oscillation
 
 <img src="assets/images/damping-vibration.png" height="250px">
 
@@ -181,22 +144,22 @@ $$ x(t) = A \exp(-\beta t) \cos\left(\sqrt{\frac{k}{m}} t + \varphi \right) $$
 
 <div class="highlight-box">
 
-* 徐々に振動が小さくなる (**減衰振動**)
+* The oscillation gradually decreases!
 
 </div>
 
 ---
 
-## 揚力と逆揚力
+## Lift and Negative Lift
 
 ---
 
-### 流体の運動
+### Fluid Motion
 
 <div class="simple-box">
 
-* 空気や水などの「流れるもの」を流体という
-* 風や水の流れによって物体に加わる力は流体の運動によって理解できる
+* Air and water are examples of "flowing substances" called fluids
+* Forces exerted on objects by wind or water flow can be understood through fluid motion
 
 </div>
 
@@ -204,14 +167,14 @@ $$ x(t) = A \exp(-\beta t) \cos\left(\sqrt{\frac{k}{m}} t + \varphi \right) $$
 
 ---
 
-### ベルヌーイの定理
+### Bernoulli's Theorem
 
 <div class="simple-box">
 
-* 流体の速度と圧力の関係を表す定理
-  * 流体の速度が速いと圧力が低くなる
-  * 流体の速度が遅いと圧力が高くなる
-* 空気は軽いので今日はポテンシャルエネルギーを無視します
+* A theorem that describes the relationship between fluid velocity and pressure
+  * When fluid velocity increases, pressure decreases
+  * When fluid velocity decreases, pressure increases
+* Since air is light, we'll ignore potential energy today
 
 </div>
 
@@ -219,15 +182,13 @@ $$ p + \frac{1}{2}\rho v^2 + \cancel{\rho gh} = \text{const} $$
 
 ---
 
-### 揚力
+### Lift
 
 <div class="simple-box">
 
-* 板の上側の流体の速度が速くなる
-  * 圧力が小さくなる
-* 板の下側の流体の速度が遅くなる
-  * 圧力が大きくなる
-* 圧力差によって板に上向きの力が働く (**揚力**)
+* Fluid velocity increases on the upper side of the plate, pressure decreases
+* Fluid velocity decreases on the lower side of the plate, pressure increases
+* The pressure difference creates an upward force on the plate (**lift**)
 
 </div>
 
@@ -235,15 +196,13 @@ $$ p + \frac{1}{2}\rho v^2 + \cancel{\rho gh} = \text{const} $$
 
 ---
 
-### 逆揚力
+### Negative Lift
 
 <div class="simple-box">
 
-* 板の上側の流体の速度が遅くなる
-  * 圧力が大きくなる
-* 板の下側の流体の速度が速くなる
-  * 圧力が小さくなる
-* 圧力差によって板に下向きの力が働く (**逆揚力**)
+* Fluid velocity decreases on the upper side of the plate, pressure increases
+* Fluid velocity increases on the lower side of the plate, pressure decreases
+* The pressure difference creates a downward force on the plate (**negative lift**)
 
 </div>
 
@@ -251,12 +210,12 @@ $$ p + \frac{1}{2}\rho v^2 + \cancel{\rho gh} = \text{const} $$
 
 ---
 
-### 揚力と逆揚力の応用例
+### Applications of Lift and Negative Lift
 
 <div class="simple-box">
 
-* 揚力による上向きの力で飛行機が飛ぶ
-* 逆揚力による下向きの力でF1カーはサーキットに押さえつけられる
+* Lift creates an upward force that allows an airplane to fly
+* Negative lift creates a downward force that keeps an F1 car pressed against the track
 
 </div>
 
@@ -278,16 +237,16 @@ $$ p + \frac{1}{2}\rho v^2 + \cancel{\rho gh} = \text{const} $$
 
 ---
 
-## 自励振動
+## Self-Excited Vibration
 
 ---
 
-### 自励振動のメカニズム
+### Self-Excited Vibration
 
 <div class="simple-box">
 
-* 振り子が風によって揚力を受ける
-* 揚力が振動を大きくする作用を生み出す！ (**自励振動**)
+* The pendulum is subjected to lift due to wind
+* The lift creates a vibration that amplifies the motion! (**self-excited vibration**)
 
 </div>
 
@@ -295,12 +254,12 @@ $$ p + \frac{1}{2}\rho v^2 + \cancel{\rho gh} = \text{const} $$
 
 ---
 
-### 自励振動の例え
+### Familiar Example
 
 <div class="simple-box">
 
-* 振動に合わせてブランコを揺らすと振動が大きくなる！
-* これと同じことが揚力で生じる！
+* If you swing the swing with the vibration, the vibration becomes larger!
+* The same thing happens with lift!
 
 </div>
 
@@ -308,21 +267,21 @@ $$ p + \frac{1}{2}\rho v^2 + \cancel{\rho gh} = \text{const} $$
 
 ---
 
-### 自励振動の運動方程式
+### Equation of Motion for Self-Excited Vibration
 
-$$ m\frac{d^2x}{dt^2} \underbrace{ - \beta \frac{dx}{dt}}_{\text{正負が逆！}} + kx  = 0 $$
+$$ m\frac{d^2x}{dt^2} \underbrace{ - \beta \frac{dx}{dt}}_{\text{opposite sign!}} + kx  = 0 $$
 
 <div class="simple-box">
 
-* 揚力による負の減衰をする
-* 符号が変わっただけだが...
-  * どうなるか？
+* Vibration with negative damping
+* Just a change in sign...
+  * What happens?
 
 </div>
 
 ---
 
-### 自励振動の一般解
+### General Solution
 
 <img src="assets/images/self-excited-vibration.png" height="250px">
 
@@ -330,20 +289,18 @@ $$ x(t) = A \exp(\beta t) \cos\left(\sqrt{\frac{k}{m}} t + \varphi \right) $$
 
 <div class="highlight-box">
 
-* 振動が大きくなる！
+* Vibration becomes larger!
 
 </div>
 
 ---
 
-### タコマナローズ橋はなぜ落ちた？
+### Why Did the Tacoma Narrows Bridge Collapse?
 
 <div class="simple-box">
 
-* 自励振動のメカニズムが働いた！
-* 風の力で振れ幅が大きくなった！
-* 数学的には振幅は指数関数的に大きくなる...
-* しかし実際の橋はいつか耐えられなくなる！
+* Self-excited vibration mechanism worked!
+* The bridge undulated significantly due to wind!
 
 </div>
 
@@ -351,21 +308,20 @@ $$ x(t) = A \exp(\beta t) \cos\left(\sqrt{\frac{k}{m}} t + \varphi \right) $$
 
 ---
 
-### まとめ
+### Conclusion
 
 <div class="simple-box">
 
-* 調和振動の運動方程式で振り子の運動を表せる！
-* 減衰項を加えた減衰振動の運動方程式で徐々に振動が小さくなる振り子の運動を表せる！
-* 流体の流れと板の傾きによって上向きの揚力、または下向きの逆揚力が働く！
-* 揚力による負の減衰をする振動方程式で自励振動のメカニズムを表せる！
-  * 減衰項の符号が逆になっただけで結果が大きく変わる！
+* Equations of motion for harmonic oscillation can represent the motion of a pendulum!
+* Equations of motion for damped oscillation can represent the motion of a pendulum that gradually decreases in amplitude!
+* Forces due to fluid flow and plate tilt create upward lift or downward negative lift!
+* Equations of motion for vibration with negative damping can represent the mechanism of self-excited vibration!
 
 </div>
 
 ---
 
-### 符号ひとつで世界が変わる！
+### One Sign Changes the World!
 
 $$ m\frac{d^2x}{dt^2} + \beta \frac{dx}{dt} + kx  = 0 $$
 
@@ -387,28 +343,28 @@ $$ m\frac{d^2x}{dt^2} - \beta \frac{dx}{dt} + kx  = 0 $$
 
 ---
 
-### 補足
+### Additional Notes
 
 <div class="simple-box">
 
-* 実際の橋梁の流体力学はもっと複雑
-  * タコマナローズ橋は空力弾性フラッターが原因で崩落したと考えられている
-* ねじれ振動(torsional vibration)も大きな原因
-* **自励振動だけが原因ではない！**
-* でも今日は最もシンプルな自励振動を取り上げました！
+* The actual fluid dynamics of bridge structures is more complex
+  * It is believed that the Tacoma Narrows Bridge collapsed due to aeroelastic flutter
+* Torsional vibration is also a significant cause
+* **Self-excited vibration alone is not the cause!**
+* But today we focused on the simplest self-excited vibration!
 
 </div>
 
 ---
 
-### LT登壇者の募集
+### LT Speaker Recruitment
 
 <div class="simple-box">
 
-* 物理学集会ではLT登壇者を募集しています！
-  * どんなジャンルでもOK！
-  * 応募がないと主催がまたLTという名目のジャイアンリサイタルを開くことになります...
-* 興味のある方は物理学集会のDiscordサーバーまで！
+* We are recruiting LT speakers at the Physics Meeting!
+  * Any genre is OK!
+  * If there is no application, the host will open a Jaiyan Ressaitaru under the guise of LT...
+* If you are interested, please join the Physics Meeting Discord server!
 
 </div>
 
@@ -416,13 +372,13 @@ $$ m\frac{d^2x}{dt^2} - \beta \frac{dx}{dt} + kx  = 0 $$
 
 ---
 
-### 告知
+### Announcement
 
 <div class="simple-box">
 
-* 次回開催は5月17日を予定しています
-* YouTubeの物理の動画をみんなで見ようと思ってます
-* 「この動画をみんなで見たい！」という提案も大歓迎です！
+* Next meeting is scheduled for May 17
+* We want everyone to watch the physics video together
+* We welcome any proposals to watch the video together!
 
 </div>
 					</textarea>
